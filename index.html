@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav id="nav">
+        <div class="navTop">
+            <div id="cart-icon">
+                <i class="ri-shopping-bag-line"></i>
+                <span class="cart-item-count"></span>
+            </div>
+            <div class="navItem">
+                <div class="search">
+                    <input type="text" placeholder="Search..." class="searchInput">
+                </div>
+            </div>
+            <div class="navItem">
+              <a href="#limiteD"><span class="limitedOffer">Limited Offer!</span></a>
+                
+            </div>
+            <div class="cart">
+                <h2 class="cart-title">Your Cart</h2>
+                <h3 class="emptyCart">Your Cart is empty please add items in the cart to proceed</h3>
+                <div class="cart-content">
+                    <!-- Cart items will be added here dynamically -->
+                </div>
+                <div class="total">
+                    <div class="total-title">Total</div>
+                    <div class="total-price">US$0.00</div>
+                </div>
+                <a href="#payPal">
+                    <button class="btn-buy">Buy Now</button>
+                </a>
+                <i class="ri-close-line" id="cart-close"></i>
+            </div>
+        </div>    
+        <div class="navBottom">
+            <h3 class="menuItem">Mercedes-Benz AMG 2020</h3>
+            <h3 class="menuItem">iPhone 15 Pro Max</h3>
+            <h3 class="menuItem">Enzo Ferrari</h3>
+            <h3 class="menuItem">GALAXY S24 ULTRA</h3>
+            <h3 class="menuItem">Mercedes-Benz C-Class C63 AMG S</h3>
+        </div> 
+    </nav>
+
+    <div class="slider">
+        <div class="sliderWrapper">
+            <div class="sliderItem">
+                <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="sliderImg">
+                <h1 class="sliderTitle">Mercedes-Benz <br> AMG 2020<br>NEW <br>SEASON</h1>
+                <h2 class="sliderPrice">$32,000.00</h2>
+                <a href="#product">
+                    <button class="buyButton">BUY NOW!</button>
+                </a>        
+            </div>
+            <div class="sliderItem">
+                <img src="https://images.unsplash.com/photo-1603921326210-6edd2d60ca68?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="sliderImg">
+                <h1 class="sliderTitle">iPhone 15 Pro <br> Max<br>NEW <br>SEASON</h1>
+                <h2 class="sliderPrice">$1,299.99</h2>
+                <a href="#product">
+                    <button class="buyButton">BUY NOW!</button>
+                </a>
+            </div>
+            <div class="sliderItem">
+                <img src="enzo.jpg" class="sliderImg">
+                <h1 class="sliderTitle">Enzo Ferrari<br>NEW <br>SEASON</h1>
+                <h2 class="sliderPrice">$80,000.00</h2>
+                <a href="#product">
+                    <button class="buyButton">BUY NOW!</button>
+                </a>
+            </div>
+            <div class="sliderItem">
+                <img src="S24 ULTRA.jpg" class="sliderImg">
+                <h1 class="sliderTitle">GALAXY S24 <br>ULTRA<br>NEW <br>SEASON</h1>
+                <h2 class="sliderPrice">$1,419.00</h2>
+                <a href="#product">
+                    <button class="buyButton">BUY NOW!</button>
+                </a>
+            </div>
+            <div class="sliderItem">
+                <img src="CAR 4.jpg" class="sliderImg">
+                <h1 class="sliderTitle">Mercedes-Benz <br> C-Class <br>C63 AMG S<br>NEW <br>SEASON</h1>
+                <h2 class="sliderPrice">$60,000.00</h2>
+                <a href="#product">
+                    <button class="buyButton">BUY NOW!</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="features">
+        <div class="feature">
+            <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="free shipping image" class="featureImg">
+            <span class="featureTitle">FREE SHIPPING</span>
+            <span class="featureDesc">Free worldwide shipping on all orders.</span>
+        </div>
+        <div class="feature">
+            <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="30 days return image" class="featureImg">
+            <span class="featureTitle">30 DAYS RETURN</span>
+            <span class="featureDesc">No question return and easy refund in 14 days.</span>
+        </div>
+        <div class="feature">
+            <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="gift card image" class="featureImg">
+            <span class="featureTitle">GIFT CARDS</span>
+            <span class="featureDesc">Buy gift cards and use coupon codes easily.</span>
+        </div>
+        <div class="feature">
+            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="contact us image " class="featureImg">
+            <span class="featureTitle">Contact</span>
+            <span class="featureDesc">Keep in touch via email and support system.</span>
+        </div>
+    </div>
+    <div class="product" id="product">
+        <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="productImg">
+        <div class="productDetails">
+            <h1 class="productTitle">Mercedes-Benz AMG 2020</h1>
+            <h2 class="productPrice">$32,000.00</h2>
+            <p class="productDesc">Mercedes-Benz AMG 2020 is a Powerful car</p>
+            <div class="colors">
+                <div class="color"></div>
+                <div class="color"></div>
+            </div>
+            <button class="productButton">BUY NOW!</button>
+        </div>
+        <form action="">
+            <div class="payment" id="payPal">
+                <h1 class="payTitle">Personal Information</h1>
+                <label>Name and Surname</label>
+                <input type="text" placeholder="Robert NLE" class="payInput" required>
+                <label>Phone Number</label>
+                <input type="number" placeholder="+256 765673373" class="payInput" required>
+                <label>Address</label>
+                <input type="text" placeholder="Market Street 21 22-145" class="payInput" required>
+                <h1 class="payTitle">Card Information</h1>
+                <input type="password" class="payInput" placeholder="Card Number" required>
+                <div class="cardInfo">
+                    <input type="text" placeholder="mm" class="payInput sm" required>
+                    <input type="text" placeholder="yyy" class="payInput sm" required>
+                    <input type="text" placeholder="cvv" class="payInput sm" required>
+                </div>
+                <button type="submit" class="payButton">Checkout!</button>
+                <span class="close">X</span>
+            </div>
+        </form>
+    </div>
+    <div class="product-boxing" id="limiteD">
+        <div class="pre-btn">></div>
+        <div class="nxt-btn">></div>
+        <div class="product-container">
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="enzo.jpg" class="product-thumb" alt="Enzo Ferrari">
+                    <button class="card-btn">Add To Cart</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Enzo Ferrari</h2>
+                    <p class="product-short-description">a short line about the product</p>
+                    <span class="price">$70,000.00</span>
+                    <span class="actual-price">$90,000.00</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="product-thumb" alt="Mercedes-Benz AMG 2020">
+                    <button class="card-btn">Add To Cart</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Mercedes-Benz AMG 2020</h2>
+                    <p class="product-short-description">a short line about the product</p>
+                    <span class="price">$19,000.99</span>
+                    <span class="actual-price">$32,000.00</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="https://images.unsplash.com/photo-1603921326210-6edd2d60ca68?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="product-thumb" alt="iPhone 15 Pro Max">
+                    <button class="card-btn">Add To Cart</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">iPhone 15 Pro Max</h2>
+                    <p class="product-short-description">a short line about the product</p>
+                    <span class="price">$880.99</span>
+                    <span class="actual-price">$1,299.99</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="G WAGON 1.jpg" class="product-thumb"   alt="Mercedes-Benz G Wagon">
+                    <button class="card-btn">Add To Cart</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Mercedes-Benz G Wagon</h2>
+                    <p class="product-short-description">a short line about the product</p>
+                    <span class="price">$100,000.00</span>
+                    <span class="actual-price">$167,000.00</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="S24 ULTRA.jpg" class="product-thumb" alt="Galaxy S24 Ultra">
+                    <button class="card-btn">Add To Cart</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Galaxy S24 Ultra</h2>
+                    <p class="product-short-description">a short line about the product</p>
+                    <span class="price">$890.98</span>
+                    <span class="actual-price">$1,419.00</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="MAC BOOK 2.jpg" class="product-thumb" alt="Mac Book Pro 15 (2018)">
+                    <button class="card-btn">Add To Cart</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Mac Book Pro 15 (2018)</h2>
+                    <p class="product-short-description">a short line about the product</p>
+                    <span class="price">$399.99</span>
+                    <span class="actual-price">$550.00</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image prdt">
+                    <span class="discount-tag">50% off</span>
+                    <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="product-thumb" alt="Apple Mac Book Pro 2019" id="nsOne">
+                    <button class="card-btn">Add To Cart</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Apple Mac Book Pro 2019</h2>
+                    <p class="product-short-description">a short line about the product</p>
+                    <span class="price">$1,000.00</span>
+                    <span class="actual-price">$2,799.00</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="CAMERA 3.jpg" class="product-thumb" alt="Sony FX3">
+                    <button class="card-btn">Add To Cart</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Sony FX3</h2>
+                    <p class="product-short-description">a short line about the product</p>
+                    <span class="price">$3,099.99</span>
+                    <span class="actual-price">$5,225.00</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="product-thumb" alt="Sony Mirrorless Camera">
+                    <button class="card-btn">Add To Cart</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Sony Mirrorless Camera</h2>
+                    <p class="product-short-description">a short line about the product</p>
+                    <span class="price">$599.87</span>
+                    <span class="actual-price">$799.99</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="Z FLIP.jpg" class="product-thumb" alt="Galaxy Z Flip 4">
+                    <button class="card-btn">Add To Cart</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Galaxy Z Flip 4</h2>
+                    <p class="product-short-description">a short line about the product</p>
+                    <span class="price">$869.83</span>
+                    <span class="actual-price">$1,000.00</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="FOLD 1.jpg" class="product-thumb" alt="Galaxy Z Fold 5">
+                    <button class="card-btn">Add To Cart</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Galaxy Z Fold 5</h2>
+                    <p class="product-short-description">a short line about the product</p>
+                    <span class="price">$999.89</span>
+                    <span class="actual-price">$1,800.00</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="S24 UTTRA 2.jpg" class="product-thumb" alt="Galaxy S24 Ultra">
+                    <button class="card-btn">Add To Cart</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Galaxy S24 Ultra</h2>
+                    <p class="product-short-description">a short line about the product</p>
+                    <span class="price">$900.00</span>
+                    <span class="actual-price">$1,299.99</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="MONITOR.jpg" class="product-thumb" alt="Apple iMac 14.3 A1418">
+                    <button class="card-btn">Add To Cart</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Apple iMac 14.3 A1418</h2>
+                    <p class="product-short-description">a short line about the product</p>
+                    <span class="price">$800.50</span>
+                    <span class="actual-price">$1,073.00</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="CAMERA 4.jpg" class="product-thumb" alt="Canon EOS 5D Mark IV">
+                    <button class="card-btn">Add To Cart</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Canon EOS 5D Mark IV</h2>
+                    <p class="product-short-description">a short line about the product</p>
+                    <span class="price">$999.20</span>
+                    <span class="actual-price">1,564.95</span>
+                </div>
+            </div>
+            <div class="product-card ">
+                <div class="product-image prdtTwo">
+                    <span class="discount-tag">50% off</span>
+                    <img src="FOLD 2.jpg" class="product-thumb" alt="Galaxy Z Fold 6" id="nsTwo">
+                    <button class="card-btn">Add To Cart</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Galaxy Z Fold 6</h2>
+                    <p class="product-short-description">a short line about the product</p>
+                    <span class="price">$1099.20</span>
+                    <span class="actual-price">US$2,225.00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="newSeason">
+        <div class="nsItem">
+            <a href="#nsOne">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="MacBook" class="nsImg nleOne"> 
+            </a>
+        </div>
+        <div class="nsItem">
+            <div class="contact-container">
+                <div class="closeEmail"></div>
+                <div class="closeEmail2"></div>
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact-left" >
+                    <div class="contact-left-title">
+                        <h2>Get in touch</h2>
+                        <hr>
+                    </div>
+                    <input type="hidden" name="access_key" value="6626aac0-98ea-46a3-82b2-8a396edaa702">
+                    <input type="text" name="name" placeholder="Enter Your Name" class="contact-inputs" required>    
+                    <input type="email" name="email" placeholder="Enter Your Email or Phone" class="contact-inputs" required>         
+                    <textarea name="message" placeholder="Message Us Here" class="contact-inputs" required></textarea> 
+                    <button type="submit">Submit</button>   
+                </form>  
+            </div>  
+            <h3 class="nsTitleSm">WINTER NEW ARRIVALS</h3>
+            <h1 class="nsTitle">New Season</h1>
+            <h3 class="nsTitle">New Collection</h3>
+            <a href="#nav">
+                <button class="nsButton">CHOOSE YOUR STYLE</button>
+            </a>
+            <button onclick="openEmailForm()" class="emailUs">email us</button>
+        </div>
+        <div class="nsItem">
+            <a href="#nsTwo">
+                <img src="FOLD 2.jpg" class="nsImg nleTwo">
+            </a>
+        </div>
+    </div>      
+    <footer>
+        <div class="footerLeft">
+            <div class="footerMenu">
+                <h1 class="fMenuTitle">About Us</h1>
+                <ul class="fList">
+                    <li class="fListItem">Company</li>
+                    <li class="fListItem">Contact</li>
+                    <li class="fListItem">Careers</li>
+                    <li class="fListItem">Affiliates</li>
+                    <li class="fListItem">Stores</li>
+                </ul>
+            </div>
+            <div class="footerMenu">
+                <h1 class="fMenuTitle">Useful Links</h1>
+                <ul class="fList">
+                    <li class="fListItem">Support</li>
+                    <li class="fListItem">Refund</li>
+                    <li class="fListItem">FAQ</li>
+                    <li class="fListItem">Feedback</li>
+                    <li class="fListItem">Stories</li>
+                </ul>
+            </div>
+            <div class="footerMenu">
+                <h1 class="fMenuTitle">Products</h1>
+                <ul class="fList">
+                    <li class="fListItem">Mercedes-Benz AMG 2020</li>
+                    <li class="fListItem">iPhone 15 Pro Max</li>
+                    <li class="fListItem">Enzo Ferrari</li>
+                    <li class="fListItem">GALAXY S24 ULTRA</li>
+                    <li class="fListItem">Mercedes-Benz C-Class C63 AMG S</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footerRight">
+            <div class="footerRightMenu">
+                <h1 class="fMenuTitle">Subscribe to our newsletter</h1>
+                <div class="fMail">
+                    <input type="text" placeholder="your@gmail.com" class="fInput">
+                    <button class="fButton">Join!</button>
+                </div>
+            </div>
+            <div class="footerRightMenu">
+                <h1 class="fMenuTitle">Follow Us</h1>
+                <div class="fIcons">
+                    <img src="https://images.unsplash.com/photo-1634942537034-2531766767d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="facebookIcon" class="fIcon">
+                    <img src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="twitterIcon" class="fIcon">
+                    <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="InstagramIcon" class="fIcon">
+                    <img src="https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="WhatsappIcon" class="fIcon">
+                </div>
+            </div>
+            <div class="footerRightMenu">
+                <span class="copyright">&copy; Robert NLE. All rights reserved. 2025.</span>
+            </div>
+        </div>
+    </footer>
+    <script src="app.js"></script>           
+</body>
+</html>
