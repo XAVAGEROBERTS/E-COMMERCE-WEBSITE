@@ -329,21 +329,31 @@ buyNowButton.addEventListener("click", () => {
 });
 
 // slidding images
-const productContainers = [...document.querySelectorAll('.product-container')];
-const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
-const preBtn = [...document.querySelectorAll('.pre-btn')];
-
-productContainers.forEach((item, i)=> {
-              let containerDimensions = item.getBoundingClientRect();
-              let containerWidth = containerDimensions.width;
-
-              nxtBtn[i].addEventListener('click', () => {
-                            item.scrollLeft += containerWidth;
-              })
-
-              preBtn[i].addEventListener('click', ()=> {
-                            item.scrollLeft -= containerWidth;
-              })
+document.addEventListener('DOMContentLoaded', function() {
+  const productContainer = document.querySelector('.product-container');
+  const prevBtn = document.querySelector('.pre-btn');
+  const nextBtn = document.querySelector('.nxt-btn');
+  
+  // Get the width of one product card (including margin)
+  const cardStyle = window.getComputedStyle(document.querySelector('.product-card'));
+  const cardWidth = document.querySelector('.product-card').offsetWidth;
+  const cardMarginRight = parseInt(cardStyle.marginRight);
+  const scrollAmount = cardWidth + cardMarginRight;
+  
+  // Set initial scroll position
+  productContainer.scrollLeft = 0;
+  
+  // Next button click
+  nextBtn.addEventListener('click', function() {
+    productContainer.style.scrollBehavior = 'smooth';
+    productContainer.scrollLeft += scrollAmount;
+  });
+  
+  // Previous button click
+  prevBtn.addEventListener('click', function() {
+    productContainer.style.scrollBehavior = 'smooth';
+    productContainer.scrollLeft -= scrollAmount;
+  });
 });
 
 
