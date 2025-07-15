@@ -366,7 +366,7 @@ function setupAnimationObserver(element, animationClass) {
                    }, 4000);
                 
                    // Unobserve after first animation if only once
-                   // observer.unobserve(element);
+                   observer.unobserve(element);
               }
          });
     }, {
