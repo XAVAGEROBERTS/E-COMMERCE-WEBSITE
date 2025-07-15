@@ -1318,4 +1318,7 @@ input, textarea, select {
     .contact-inputs {
         width: 90%;
     }
+    .nxt-btn, .pre-btn {
+      display: none
+    }
 }
